@@ -12,7 +12,7 @@ app.use(express.static('public'));
 // Templating engine -> Instead of using html to display data, we use view engines
 // EJS -> Similar sintax to HTML
 app.use(expressLayout);
-app.set('layout', './layout/main');
+app.set('layout', './layouts/main'); // Layout to be used
 app.set('view engine', 'ejs');
 
 // As a home pag
