@@ -15,9 +15,8 @@ app.use(expressLayout);
 app.set('layout', './layout/main');
 app.set('view engine', 'ejs');
 
-app.get('', (req, res) => {
-    res.send("Hello, World!");
-});
+// As a home pag
+app.use('/', require('./server/routes/main'));
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
