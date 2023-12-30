@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<%= locals.description  %>">
+    <meta name="description" content="<%= locals.description %>">
 
     <!-- Express static folder is setted to the public folder inside the public folder there are js, img and css folders -->
     <link rel="stylesheet" href="./css/style.css"> 
@@ -17,8 +17,12 @@
     <div class="container">
         <%- include('../partials/header.ejs') %>
 
-        <!-- Layout to be used - specified in app.js -->
-        <%- body %>
+        <main class="main">
+            <!-- Layout to be used - specified in app.js -->
+            <%- body %>
+        </main>
+
+        <%- include('../partials/footer.ejs') %>
     </div>
     
 </body>

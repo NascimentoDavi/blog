@@ -12,7 +12,12 @@ router.get('', (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-    res.render('about');
+    const locals = {
+        title: "Nodejs blog about page",
+        description: "Another descrip."
+    }
+
+    res.render('about', { locals });
 });
 
 module.exports = router;
