@@ -8,7 +8,7 @@ router.get('', (req, res) => {
         description: "A blog created with NodeJs, Express and MongoDB"
     }   
 
-    res.render('index', { locals });
+    res.render('index', {url:req.protocol+"://"+req.headers.host});
 });
 
 router.get('/about', (req, res) => {
@@ -17,7 +17,7 @@ router.get('/about', (req, res) => {
         description: "Another descrip."
     }
 
-    res.render('about', { locals });
+    res.render('about', {url:req.protocol+"://"+req.headers.host});
 });
 
 module.exports = router;
