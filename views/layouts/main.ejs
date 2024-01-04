@@ -13,18 +13,13 @@
 </head>
 
 <body>
-    <p class="text-orange-700"><%-url%></p>
+    <%- include('../partials/header.ejs') %>
 
-    <div class="container">
-        <%- include('../partials/header.ejs') %>
+    <main class="main">
+        <!-- Layout to be used - specified in app.js -->
+        <%- body %>
+    </main>
 
-        <main class="main">
-            <!-- Layout to be used - specified in app.js -->
-            <%- body %>
-        </main>
-
-        <%- include('../partials/footer.ejs') %>
-    </div>
-    
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
