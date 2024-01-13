@@ -3,50 +3,32 @@
     <h2 id="articles-header" class="text-3xl border-b border-gray-400">Latest Posts</h2>
 
     <div id="articles-container-list" class="flex flex-col">
-        <ul class="articles-container-list-item flex justify-between items-center mx-2 pb-3 border-b border-gray-200">
-            <li class="hover:scale-105 duration-200 hover:text-orange-300 flex flex-col">
-                <a href="#" class="text-xl text-black">
-                Post Title
-                </a>
-                <a href="#" class="author-name text-xs text-gray-500 italic" style="margin-top: -6px;">
-                    <span>Author: Fulano de Tal</span>
-                </a>
-            </li>
-            <li class="hover:scale-105 duration-200 hover:text-orange-300"><a href="#">Post Date</a></li>
+
+        <ul class="articles-container-list-item mx-2 pb-3 flex-col justify-between">
+
+            <% data.forEach(post => { %>
+
+                <div class="flex justify-between py-4 border-b border-gray-300 items-center">
+
+                    <li class="hover:scale-105 duration-200 hover:text-orange-300 flex flex-col">
+                        <a href="#" class="text-xl text-black">
+                        <%= post.title %>
+                        </a>
+                        <a href="#" class="author-name text-xs text-gray-500 italic" style="margin-top: -6px;">
+                            <span>Author: Fulano de Tal</span>
+                        </a>
+                    </li>
+
+                    <li class="hover:scale-105 duration-200 hover:text-orange-300">
+                        <a href="#"><%= post.createdAt.toDateString() %></a>
+                    </li>
+
+                </div>
+
+            <% }) %>
+            
         </ul>
-        <ul class="articles-container-list-item flex justify-between items-center mx-2 py-3 border-b border-gray-200">
-            <li class="hover:scale-105 duration-200 hover:text-orange-300 flex flex-col">
-                <a href="#" class="text-xl text-black">
-                Post Title
-                </a>
-                <a href="#" class="author-name text-xs text-gray-500 italic" style="margin-top: -6px;">
-                    <span>Author: Fulano de Tal</span>
-                </a>
-            </li>
-            <li class="hover:scale-105 duration-200 hover:text-orange-300"><a href="#">Post Date</a></li>
-        </ul>
-        <ul class="articles-container-list-item flex justify-between items-center mx-2 py-3 border-b border-gray-200">
-            <li class="hover:scale-105 duration-200 hover:text-orange-300 flex flex-col">
-                <a href="#" class="text-xl text-black">
-                Post Title
-                </a>
-                <a href="#" class="author-name text-xs text-gray-500 italic" style="margin-top: -6px;">
-                    <span>Author: Fulano de Tal</span>
-                </a>
-            </li>
-            <li class="hover:scale-105 duration-200 hover:text-orange-300"><a href="#">Post Date</a></li>
-        </ul>
-        <ul class="articles-container-list-item flex justify-between items-center mx-2 py-3 border-gray-200">
-            <li class="hover:scale-105 duration-200 hover:text-orange-300 flex flex-col">
-                <a href="#" class="text-xl text-black">
-                Post Title
-                </a>
-                <a href="#" class="author-name text-xs text-gray-500 italic" style="margin-top: -6px;">
-                    <span>Author: Fulano de Tal</span>
-                </a>
-            </li>
-            <li class="hover:scale-105 duration-200 hover:text-orange-300"><a href="#">Post Date</a></li>
-        </ul>
+
     </div>
 
 </div>

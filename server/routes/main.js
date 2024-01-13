@@ -1,15 +1,54 @@
 const express = require('express');
 const router = express.Router();
+const Post = require('../models/Post.js');
 
-// Routes
-router.get('', (req, res) => {
+
+/**
+ * GET
+ * HOME
+ */
+router.get('', async (req, res) => {
     const locals = {
         title: "Nodejs Blog",
         description: "A blog created with NodeJs, Express and MongoDB"
-    }   
+    }
 
-    res.render('index', {url:req.protocol+"://"+req.headers.host});
+    try {
+        const data = await Post.find();
+        res.render('index', {url:req.protocol+"://"+req.headers.host, data});
+    } catch (error) {
+        console.log(error);
+    }
+
+    
 });
+
+
+// function insertPostData () {
+//     Post.insertMany(
+//         [
+//             {
+//                 title: "Building a Blog",
+//                 body: "This is the body text"
+//             },
+//         ]
+//     )
+// }
+
+// insertPostData();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 router.get('/about', (req, res) => {
     const locals = {
