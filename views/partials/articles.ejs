@@ -10,13 +10,16 @@
 
                 <div class="flex justify-between py-4 border-b border-gray-300 items-center">
 
-                    <li class="hover:scale-105 duration-200 hover:text-orange-300 flex flex-col">
-                        <a href="#" class="text-xl text-black">
+                    <li class="hover:scale-105 duration-200 hover:text-orange-300 flex flex-col gap-1">
+
+                        <a href="/post/<%= post._id %>" class="text-xl text-black">
                         <%= post.title %>
                         </a>
+
                         <a href="#" class="author-name text-xs text-gray-500 italic" style="margin-top: -6px;">
-                            <span>Author: Fulano de Tal</span>
+                            <span>Author: <%= post.author %></span>
                         </a>
+
                     </li>
 
                     <li class="hover:scale-105 duration-200 hover:text-orange-300">

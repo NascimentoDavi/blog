@@ -9,6 +9,11 @@ const PostSchema = new Schema(
             type: String,
             required: true
         },
+
+        author: {
+            type:String,
+            required: true
+        },
         
         body: {
             type: String,
@@ -24,7 +29,7 @@ const PostSchema = new Schema(
             type: Date,
             default: Date.now
         }
-        
+
     }
 
 )

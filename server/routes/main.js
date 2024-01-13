@@ -29,6 +29,7 @@ router.get('', async (req, res) => {
 //         [
 //             {
 //                 title: "Building a Blog",
+//                 author: "Davi Nascimento",
 //                 body: "This is the body text"
 //             },
 //         ]
