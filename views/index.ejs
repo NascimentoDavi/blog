@@ -1,12 +1,17 @@
-<div class="author py-10 flex flex-col sm:gap-7 md:gap-10 lg:gap-12 xl:gap-14">
+<div class="main flex flex-col gap-5 sm:gap-7 md:gap-10 lg:gap-12 xl:gap-14">
+    <div class="author pt-10 flex flex-col gap-5 sm:gap-7 md:gap-10 lg:gap-12 xl:gap-14">
 
-    <div class="author-greet flex flex-col items-center">
-        <h1 class="text-5xl text-center">Hi, I'm Davi</h1>
-        <h2 class="text-3xl text-center">Web Developer, a free soul</h2>
-    </div>
-    
-    <div class="author-photo flex justify-center">
-        <img src="https://picsum.photos/500/250" alt="greeting-photo" class="rounded-md index-img">
+        <div class="author-greet flex flex-col items-center">
+            <h1 class="text-5xl text-center">Hi, I'm Davi</h1>
+            <h2 class="text-3xl text-center">Web Developer, a free soul</h2>
+        </div>
+        
+        <div class="flex justify-center" id="hero-section-photo">
+            <img src="/img/image-hero-section.webp" alt="greeting-photo" class="rounded-md" id="profile-photo">
+        </div>
+
     </div>
 
+    <!-- Articles -->
+    <%- include('../views/partials/articles.ejs')%>
 </div>

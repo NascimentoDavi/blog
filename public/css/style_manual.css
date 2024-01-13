@@ -1,3 +1,8 @@
+.main {
+    background-color: gray;
+    background-image: linear-gradient(rgb(242, 240, 240), white, rgb(242, 240, 240));
+}
+
 .searchBar {
     /* visibility: hidden;
     transform: translateY(-100px); */
@@ -39,10 +44,6 @@
     display: block;
 }
 
-.index-img {
-    max-width: 70%;
-}
-
 @media screen and (max-width: 390px) {
     .author-greet {
         max-width: 70%;
@@ -50,5 +51,42 @@
     }
     .author-greet h1 h2 {
         max-width: fit-content;
+    }
+}
+
+#profile-photo {
+    max-width: 50%;
+}
+
+#articles-container {
+    max-width: 50%;
+}
+
+.author-name > span {
+    position: relative;
+    text-decoration: none;
+}
+
+.author-name > span::after {
+    content: "";
+    position: absolute;
+    background-color: orange;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+.author-name > span:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 350px) {
+    .articles-container-list-item {
+        flex-direction: column;
+        gap: 2px;
+        padding: 4px 0 4px 0;
+        margin: 0;
     }
 }
